@@ -287,10 +287,10 @@ class Sfm():
             feature_0 = np.copy(features_cur)
             feature_1 = np.copy(features_2)
             pose_1 = np.copy(pose_2)
-            cv2.imshow(self.img_obj.image_list[0].split('\\')[-2], image_2)
-            if cv2.waitKey(1) & 0xff == ord('q'):
-                break
-        cv2.destroyAllWindows()
+            # # cv2.imshow(self.img_obj.image_list[0].split('\\')[-2], image_2)
+            # if cv2.waitKey(1) & 0xff == ord('q'):
+            #     break
+        # cv2.destroyAllWindows()
 
         print("Printing to .ply file")
         print(total_points.shape, total_colors.shape)
