@@ -279,8 +279,8 @@ class Sfm():
 
             transform_matrix_0 = np.copy(transform_matrix_1)
             pose_0 = np.copy(pose_1)
-            plt.scatter(i, error)
-            plt.pause(0.05)
+            # plt.scatter(i, error)
+            # plt.pause(0.05)
 
             image_0 = np.copy(image_1)
             image_1 = np.copy(image_2)
