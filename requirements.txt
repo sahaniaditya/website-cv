@@ -10,7 +10,6 @@ tomlkit
 open3d
 plotly
 vtk
-torch
 libgl1
 libglib2.0-0
 libxrender1
