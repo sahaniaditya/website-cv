@@ -9,13 +9,13 @@ import matplotlib.pyplot as plt
 class Image_loader():
     def __init__(self, img_dir:str, downscale_factor:float):
         # loading the Camera intrinsic parameters K
-        with open(img_dir + '\\K.txt') as f:
+        with open(os.path.join(img_dir,'K.txt')) as f:
             self.K = np.array(list((map(lambda x:list(map(lambda x:float(x), x.strip().split(' '))),f.read().split('\n')))))
             self.image_list = []
         # Loading the set of images
         for image in sorted(os.listdir(img_dir)):
             if image[-4:].lower() == '.jpg' or image[-5:].lower() == '.png':
-                self.image_list.append(img_dir + '\\' + image)
+                self.image_list.append(os.path.join(img_dir,image))
         
         self.path = os.getcwd()
         self.factor = downscale_factor

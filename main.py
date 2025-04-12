@@ -219,7 +219,7 @@ if sfm_zip_file is not None:
     st.success(f"Extracted {zip_name} dataset.")
 
     if st.button("Run SfM Model"):
-        output = run_sfm(sfm_extract_path + "\\" + zip_name) 
+        output = run_sfm(os.path.join(sfm_extract_path,zip_name)) 
         st.success("Model ran successfully.")
 
         # Construct PLY path based on zip filename
